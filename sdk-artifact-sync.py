@@ -198,7 +198,7 @@ for index, missing_artifact in enumerate(missing_artifacts):
 
     if not dry_run:
         if verbose:
-            subprocess.check_call(cmd)
+            subprocess.check_call(cmd, shell=True)
         else:
             subprocess.check_output(cmd)
         print 'Done!'
